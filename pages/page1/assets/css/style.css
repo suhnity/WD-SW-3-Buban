@@ -82,7 +82,7 @@ body, html {
     background-color: #052e51;
   }
   
-  /* Static Footer Styles */
+  
   .footer1 {
     background-color: #5a5a5a;
   }
@@ -126,7 +126,7 @@ body, html {
     background: rgb(251,176,63);
     background: radial-gradient(circle, rgb(139, 56, 184) 0%, rgb(61, 43, 65) 100%);  }
   
-  /* Animated Footer Styles */
+
   .footer6, .footer7, .footer8, .footer9, .footer10 {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgb(61, 52, 97) 50%, rgb(82, 48, 99) 61%, rgb(96, 60, 125) 100%);    color: #fff;
@@ -135,7 +135,7 @@ body, html {
     position: relative;
   }
   
-  /* Animated Footer 1: Fade-In and Fade-Out Animation */
+  
   .footer6 h2,
   .footer6 p {
     opacity: 0;
@@ -151,7 +151,7 @@ body, html {
     }
   }
   
-  /* Animated Footer 2: Slide-In and Slide-Out Animation */
+  
   .footer7 h2,
   .footer7 p,
   .footer7 form {
@@ -171,7 +171,7 @@ body, html {
     }
   }
   
-  /* Animated Footer 3: Pulsating Effect */
+
   .footer8 h2 {
     animation: pulse 5s infinite 3s;
   }
@@ -191,7 +191,7 @@ body, html {
     }
   }
   
-  /* Animated Footer 4: Scale and Fade Animation */
+ 
   .footer9 h2 {
     animation: scaleInFadeOut 5s infinite 3s;
   }
@@ -211,7 +211,7 @@ body, html {
     }
   }
   
-  /* Animated Footer 5: Bounce Animation */
+  
   .footer10 h2 {
     animation: bounce 5s infinite 3s;
   }
