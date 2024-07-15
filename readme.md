@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/suhnity/">
-    <img src="./assets/img/kuro cook.png" alt="kuro" width="200" height="200">
+    <img src="./assets/img/chef_kuro.png" alt="kuro" width="200" height="200">
   </a>
   <h3 align="center">Seatwork 3: Footer & Header</h3>
 </div>
