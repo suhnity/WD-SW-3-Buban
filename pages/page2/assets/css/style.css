@@ -26,32 +26,42 @@ section {
   align-items: flex-end;
 }
 
-/* Nested Specific */
 header.design-one {
   width: 100vw;
   display: flex;
   justify-content: space-between;
   padding: 0.7rem 10vw;
-  background: rgb(136, 78, 201);
-
-  & > img.company-logo {
-    height: 50px;
-  }
-
-  & > nav.navigation {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    & > a.navigation-content {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: black;
-    }
-  }
+  background: rgb(91, 66, 120);
 }
 
-/* Nested Specific Class */
+header.design-one img.company-logo {
+  height: 50px;
+}
+
+header.design-one nav.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header.design-one nav.navigation a.navigation-content {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: black;
+}
+
+header.design-one nav.navigation .different-font {
+  background-color: rgb(22, 47, 157);
+  border: 1px rgba(0, 0, 0, 0.981) solid;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+header.design-one nav.navigation a.login::after {
+  content: ' ▼';
+}
+
+
 .design-two {
   display: flex;
   width: 100vw;
@@ -59,27 +69,43 @@ header.design-one {
   padding: 0.7rem 10vw;
   align-items: center;
   background: rgb(126, 87, 137);
-
-  & > .navigation {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-
-    & > .navigation-content {
-      color: aliceblue;
-      font-weight: 800;
-      font-size: 1.2rem;
-    }
-
-    & > .call-to-action {
-      border: 1px white solid;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-    }
-  }
 }
 
-/* Non-Nested Non-Specific Class */
+.design-two > .company-logo {
+  height: 50px;
+}
+
+.design-two > .search-bar {
+  flex-grow: 1;
+  margin: 0 2rem;
+}
+
+.design-two > .search-bar > input {
+  width: 60%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.design-two > .navigation {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.design-two > .navigation > .navigation-content {
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.design-two > .navigation > .call-to-action {
+  border: 1px white solid;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
 .design-three {
   background-color: #d86ee7;
   display: flex;
@@ -110,24 +136,30 @@ header.design-one {
   font-size: 2.5rem;
 }
 
-/* Universal Class */
+.design-three .navigation .search-icon {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  margin-right: 0.5rem;
+}
+
 .company-logo {
   height: 80px;
 }
 
-/* Nested Non-Specific Class */
 .design-four {
   background-color: #a870dc;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 3.5rem;
+  gap: 10rem;
   width: 100vw;
   box-shadow: 0 10px rgba(124, 124, 124, 0.534);
   padding: 1.5rem 0;
   border: 1px black solid;
+  position: relative; 
 
   & .company-logo {
+    margin-left: -6rem;
     height: 70px;
   }
 
@@ -142,6 +174,16 @@ header.design-one {
     font-size: 1.2rem;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  & .menu-icon {
+    font-size: 2rem;
+    color: black;
+    position: absolute; 
+    right: 5rem; 
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
   }
 }
 
@@ -183,123 +225,115 @@ header.design-one {
     width: 100px;
   }
 
-/* Design with animation */
 header.design-one-animation {
   width: 100vw;
   display: flex;
-  justify-content: center;
-  gap: 9rem;
-  padding: 0 10vw;
-  height: calc(50px + 1rem);
+  justify-content: space-between;
+  padding: 0.7rem 10vw;
+  background: rgb(91, 66, 120);
+}
+
+header.design-one-animation img.company-logo {
+  height: 50px;
+}
+
+header.design-one-animation nav.navigation {
+  display: flex;
   align-items: center;
-  background: rgb(211, 129, 238);
+  gap: 1rem;
+}
 
-  & > img.company-logo {
-    height: 50px;
-    padding: 0.2rem 0;
-    transition: all 0.3s ease;
+header.design-one-animation nav.navigation a.navigation-content {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: black;
+  transition: transform 0.4s, border 0.4s;
+}
 
-    &:hover {
-      transform: rotateZ(720deg);
-    }
-  }
+header.design-one-animation nav.navigation a.navigation-content:hover {
+  transform: rotate(360deg);
+  border: 2px solid blue;
+  background-color: blue;
+  border-radius: 15px;
+}
 
-  & > nav.navigation {
-    display: flex;
-    align-items: center;
-    height: 100%;
+header.design-one-animation nav.navigation .different-font {
+  background-color: rgb(22, 47, 157);
+  border: 2px rgba(0, 0, 0, 0.981) solid;
+  padding: .5rem 1rem;
+  border-radius: 20px;
+}
 
-    & > a.navigation-content {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: black;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0 5rem;
-      transition: 0.2s ease;
-
-      &:hover {
-        background: rgb(94, 29, 186);
-      }
-    }
-  }
+header.design-one-animation nav.navigation a.login::after {
+  content: ' ▼';
 }
 
 header.design-two-animation {
-  width: 100vw;
   display: flex;
+  width: 100vw;
   justify-content: space-between;
-  padding: 0 10vw;
-  height: calc(50px + 1rem);
+  padding: 0.7rem 10vw;
   align-items: center;
-  background: #ea90da;
-
-  & > .pop-up {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    &:hover {
-      & > img.company-logo {
-        transform: rotateZ(-45deg);
-      }
-
-      & > h1 {
-        color: rgb(221, 139, 32);
-        transform: translateX(0);
-      }
-    }
-
-    & > img.company-logo {
-      height: 65px;
-      padding: 0.2rem 0;
-      transition: all 0.1s ease;
-    }
-
-    & > h1 {
-      color: transparent;
-      transform: translateX(-5rem);
-      transition: all 0.1s ease;
-    }
-  }
-
-  & > nav.navigation {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    gap: 6rem;
-
-    & > a.button {
-      display: inline-block;
-      padding: 15px 25px;
-      font-size: 24px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      outline: none;
-      color: #090808;
-      background-color: #ea90da;
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 3px #d86ee7;
-
-      &:hover {
-        background: #a765c3;
-        transform: translate(-10px, -10px);
-        box-shadow: 10px 10px 0px 0px rgb(69, 16, 70);
-        border: 1px rgb(0, 0, 0) solid;
-      }
-
-      &:active {
-        background: rgb(37, 6, 41);
-        transform: translate(0px, 0px);
-        box-shadow: 0px 0px 0px 0px rgb(61, 18, 54);
-        border: 1px transparent solid;
-      }
-    }
-  }
+  background: rgb(126, 87, 137);
 }
+
+header.design-two-animation img.company-logo {
+  height: 50px;
+  transition: transform 0.4s;
+}
+
+header.design-two-animation img.company-logo:hover {
+  transform: rotate(360deg);
+}
+
+header.design-two-animation .search-bar {
+  flex-grow: 1;
+  margin: 0 2rem;
+}
+
+header.design-two-animation .search-bar input {
+  width: 60%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+header.design-two-animation nav.navigation {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+header.design-two-animation nav.navigation a.navigation-content {
+  border: 1px black;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform 0.3s, background-color 0.1s;
+}
+
+header.design-two-animation nav.navigation a.navigation-content:active {
+  transform: scale(0.6);
+}
+
+header.design-two-animation nav.navigation a.call-to-action:active {
+  background-color: blue;
+  transform: scale(0.75);
+}
+
+header.design-two-animation nav.navigation a.call-to-action {
+  border: 1px white solid;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
 
 .design-three-animation {
   display: flex;
@@ -332,7 +366,7 @@ header.design-two-animation {
 
   & .navigation {
     display: flex;
-    gap: 18rem;
+    gap: 12rem;
   }
 
   & .navigation-content {
@@ -365,6 +399,12 @@ header.design-two-animation {
   }
 }
 
+
+
+
+
+
+
 .design-four-animation {
   display: flex;
   flex-direction: column;
@@ -377,155 +417,189 @@ header.design-two-animation {
   padding: 4rem;
   align-items: center;
   align-self: flex-start;
-
-  & .company-logo {
-    height: 200px;
-    padding: .5rem;
-    transition: all ease .2s;
-
-    &:hover {
-      transform: scale(1.2);
-      filter: drop-shadow(0 0 10px white);
-    }
-
-  }
-
-  & p {
-    font-size: 1.7rem;
-    font-family: fantasy;
-    letter-spacing: 3px;
-    color: aliceblue;
-    width: 100%;
-    display: contents;
-  }
-  
-  & a {
-      width: 100%;
-      transition: all ease .2s;
-      display: flex;
-      justify-content: center;
-      }
-
-
-  & .navigation {
-    display: flex;
-    color: rgb(105, 24, 24);
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-
-    &:hover a:not(:hover) {
-      transform: rotateY(360deg) scale(.7);
-    }
-  }
-
-  & a.socials {
-    & h3 {
-      position: absolute;
-      left: 2rem;
-      background: transparent;
-      color: transparent;
-      padding: .4rem .7rem;
-      border: transparent 1px solid;
-      border-radius: 13px;
-      transition: all .3s ease;
-    }
-
-    & .krabby {
-      height: 70px;
-      width: 90px;
-    }
-
-    &:hover {
-      & h3 {
-        left: 21rem;
-        background: white;
-        color: black;
-        border-color: black;
-      }
-    }
-  }
 }
+
+.design-four-animation .company-logo {
+  height: 200px;
+  padding: .5rem;
+  transition: all ease .2s;
+}
+
+.design-four-animation .company-logo:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px white);
+}
+
+.design-four-animation p {
+  font-size: 1.7rem;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  color: aliceblue;
+  width: 100%;
+  display: contents;
+}
+
+.design-four-animation a {
+  width: 100%;
+  transition: all ease .2s;
+  display: flex;
+  justify-content: center;
+}
+
+.design-four-animation .navigation {
+  display: flex;
+  color: rgb(105, 24, 24);
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.design-four-animation .navigation-content {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.design-four-animation .navigation-content::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.design-four-animation .navigation-content:hover {
+  color: blueviolet;
+  transform: rotate(-5deg) scale(1.2);
+}
+
+.design-four-animation .navigation-content:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+.design-four-animation a.socials h3 {
+  position: absolute;
+  left: 2rem;
+  background: transparent;
+  color: transparent;
+  padding: .4rem .7rem;
+  border: transparent 1px solid;
+  border-radius: 13px;
+  transition: all .3s ease;
+}
+
+.design-four-animation a.socials .krabby {
+  height: 70px;
+  width: 90px;
+}
+
+.design-four-animation a.socials:hover h3 {
+  left: 21rem;
+  background: white;
+  color: black;
+  border-color: black;
+}
+
+
+
+
+
+
+
 
 .design-five-animation {
   background-color: #a870dc;
-  z-index: 0;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
   width: 100vw;
   box-shadow: 0 10px rgba(124, 124, 124, 0.534);
   padding: 1.5rem 0;
   border: 1px black solid;
-
-  &:hover {
-    & .navigation-content:not(:hover) {
-      transform: scale(.5);
-    }
-  }
-
-  & .name {
-    color: transparent;
-    position: absolute;
-    padding-left: 28px;
-    transform: translateY(0) scale(0);
-    transition: all ease .2s;
-  }
-
-  & .bubbles {
-    position: absolute;
-    margin: 25px;
-    width: 30px;
-    transform: translateX(13px);
-    transition: all ease .2s;
-    z-index: -1;
-  }
-
-  & .company-logo {
-    height: 75px;
-    transition: all ease .2s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-
-    &:active {
-      transform: scale(.8);
-      filter: drop-shadow(0 0 10px black);
-
-      & ~ .name {
-        color: black;
-        transform: translateY(20px);
-      }
-
-      & ~ .bubbles {
-        &.bubble1 {
-          transform: translateY(-42px) translateX(14px);
-        }
-        
-        &.bubble2 {
-          transform: translateY(-29px) translateX(-23px);
-        }
-    
-        &.bubble3 {
-          transform: translateY(-29px) translateX(50px);
-        }
-      }
-    }
-  }
-
-  & .navigation {
-    display: flex;
-    gap: 2rem;
-  }
-
-  & .navigation-content {
-    color: black;
-    font-weight: 700;
-    font-size: 1.2rem;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      transition: all .2s ease;
-  }
+  position: relative;
 }
+
+.design-five-animation .company-logo {
+  margin-left: 12rem;
+  height: 75px;
+  transition: transform ease 0.2s;
+}
+
+.design-five-animation .company-logo:hover {
+  transform: scale(1.2);
+}
+
+.design-five-animation .navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 7rem;
+}
+
+.design-five-animation .navigation-content {
+  color: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.design-five-animation .search-icon {
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.design-five-animation .search-bar {
+  position: absolute;
+  top: 50%;
+  left: -200px; 
+  transform: translateX(-100%);
+  background-color: white;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.design-five-animation .search-icon:hover + .search-bar {
+  transform: translateX(0); 
+  opacity: 1;
+  pointer-events: auto;
+  left: calc(100% + 10px); 
+}
+
+.design-five-animation .navigation-content:hover {
+  color: blueviolet;
+  transform: rotate(-5deg) scale(1.2);
+  border: 2px solid violet;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px white, 0 0 10px white inset;
+}
+
+
+
+
+
+
+
+
+
+
+
