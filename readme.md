@@ -49,11 +49,14 @@
 
 ## Overview
 
-This project demonstrates the coding of HTML and CSS in different kinds of headers and footers in addition of animations. This is to have hands-on experience in coding and having an actual output.
+The project serves as a platform to explore and showcase different design concepts and styles for headers and footers. It allows experimentation with static designs that focus on simplicity and functionality, as well as animated designs that add dynamic elements to enhance visual appeal and interactivity. The website project aims to showcase various static and animated versions of headers and footers across different pages. Each version of the header and footer will demonstrate different design styles, animations, and functionalities to enhance user experience and engagement. By incorporating animated headers and footers, the website aims to captivate and retain user attention. Animated elements such as transitions, hover effects, and scrolling animations create a more engaging user experience, making the website visually appealing and memorable.
 
-### Instructions
-The landing page includes the project's name, title, and a short overview. Clicking the header and footer containers will lead to a range of static and animated designs.
-
+### Key Features
+- Multipage Program
+- Scrolling Feature
+- Interactive Navigational Buttons
+- Design and Layout Variety
+- Visually Appealing
 
 ### Technology
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -97,4 +100,5 @@ WD-ProjectName
 
 | Title | Purpose | Link |
 |-|-|-|
-| kuro cook | For the read*me logo | https://pin.it/4IF8myrw6 |
+| kuro cook | For the readme logo | https://pin.it/4IF8myrw6 |
+| other images | For the design purposes | google.com |
